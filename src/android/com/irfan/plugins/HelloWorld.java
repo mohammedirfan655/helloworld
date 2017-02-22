@@ -1,6 +1,6 @@
 package com.irfan.plugins;
 
-import android.os.Bundle;
+import android.os.*;
 import android.content.Context;
 import org.apache.cordova.CallbackContext;
 import org.apache.cordova.CordovaPlugin;
