@@ -1,10 +1,7 @@
 package com.irfan.plugins;
 
 import android.os.*;
-import android.content.Context;
-import org.apache.cordova.CallbackContext;
-import org.apache.cordova.CordovaPlugin;
-import org.apache.cordova.PluginResult;
+import org.apache.cordova.*;
 import android.widget.Toast;
 import org.json.JSONArray;
 import org.json.JSONException;
@@ -16,11 +13,10 @@ public class HelloWorld extends CordovaPlugin {
 
 	@Override
 	public boolean execute(String action, JSONArray args, final CallbackContext callbackContext) throws JSONException {
-		Context context = getApplicationContext();
 		CharSequence text = "This is my first cordova plugin";
 		int duration = Toast.LENGTH_SHORT;
 
-		Toast toast = Toast.makeText(context, text, duration);
+		Toast toast = Toast.makeText(cordova.getActivity().getApplicationContext(), text, duration);
 		toast.show();
 	}
 
