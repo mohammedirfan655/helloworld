@@ -18,6 +18,8 @@ public class HelloWorld extends CordovaPlugin {
 
 		Toast toast = Toast.makeText(cordova.getActivity().getApplicationContext(), text, duration);
 		toast.show();
+
+		return true;
 	}
 
 }
