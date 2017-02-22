@@ -3,7 +3,7 @@ function HelloWorld() {
 
 
 HelloWorld.prototype.show = function (message, successCallback, errorCallback) {
-	var options=array();
+	var options={};
 	cordova.exec(successCallback, errorCallback, "HelloWorld", "show", [options]);
 };
 
