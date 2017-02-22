@@ -1,0 +1,34 @@
+{
+  "name": "cordova-plugin-helloworld",
+  "version": "1.0",
+  "description": "Demo plugin.",
+  "cordova": {
+    "id": "cordova-plugin-helloworld",
+    "platforms": [
+      "android"
+    ]
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/mohammedirfan655/helloworld.git"
+  },
+  "keywords": [
+    "Notification",
+    "Message",
+    "Alert",
+    "ecosystem:cordova",
+    "cordova-android"
+  ],
+  "engines": [
+    {
+      "name": "cordova",
+      "version": ">=3.0.0"
+    }
+  ],
+  "author": "Mohammed Irfan",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/mohammedirfan655/helloworld/issues"
+  },
+  "homepage": "https://github.com/mohammedirfan655/helloworld#readme"
+}

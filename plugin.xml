@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<plugin xmlns="http://apache.org/cordova/ns/plugins/1.0"
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        id="cordova-plugin-helloworld"
+        version="2.6.0">
+
+  <name>HelloWorld</name>
+
+  <description>
+    Demo Hello World plugin
+  </description>
+
+  <author>Mohammed Irfan</author>
+
+  <license>MIT</license>
+
+  <keywords>HelloWorld, Message, Alert</keywords>
+
+  <repo>https://github.com/mohammedirfan655/helloworld.git</repo>
+
+  <issue>https://github.com/mohammedirfan655/helloworld/issues</issue>
+
+  <engines>
+    <engine name="cordova" version=">=3.0.0"/>
+  </engines>
+
+  <js-module src="www/HelloWorld.js" name="HelloWorld">
+    <clobbers target="window.plugins.HelloWorld" />
+  </js-module>
+
+  <!-- android -->
+  <platform name="android">
+
+    <config-file target="res/xml/config.xml" parent="/*">
+      <feature name="HelloWorld">
+        <param name="android-package" value="com.irfan.plugins.HelloWorld" />
+      </feature>
+    </config-file>
+
+    <source-file src="src/android/com/irfan/plugins/HelloWorld.java" target-dir="src/com/irfan/plugins"/>
+  </platform>
+  
+</plugin>
