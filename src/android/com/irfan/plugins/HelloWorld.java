@@ -34,8 +34,9 @@ public class HelloWorld extends CordovaPlugin {
 
 	private void show(String message, CallbackContext callbackContext) {
 	        Log.i("KIRANCSE","show() - START");
-        Log.i("KIRANCSE","message received till show() - "+message);
-		if (message.equals("Test")) {
+        Log.i("KIRANCSE","show() - message received = "+message);
+        Log.i("KIRANCSE","show() - if result - "+message.equals("Test"));
+		if (message.equals("Test") == true) {
 	        Log.i("KIRANCSE","show() - Inside if");
 		    callbackContext.success(message);
 		} else {
