@@ -14,10 +14,13 @@ public class HelloWorld extends CordovaPlugin {
 
 	@Override
 	public boolean execute(String action, String args, final CallbackContext callbackContext) throws JSONException {
+	        Log.i("KIRANCSE","execute() - START");
 			if ( action.equals(ACTION_SHOW_EVENT) ) {
-				show(args,callbackContext);
+		        Log.i("KIRANCSE","execute() - inside if");
+				this.show(args,callbackContext);
 				return true;
 			}
+        Log.i("KIRANCSE","execute() - outside if");
 
 /*
 		CharSequence text = "This is my first cordova plugin";
@@ -30,9 +33,13 @@ public class HelloWorld extends CordovaPlugin {
 	}
 
 	private void show(String message, CallbackContext callbackContext) {
-		if (message == "Test") {
+	        Log.i("KIRANCSE","show() - START");
+        Log.i("KIRANCSE","message received till show() - "+message);
+		if (message.equals("Test")) {
+	        Log.i("KIRANCSE","show() - Inside if");
 		    callbackContext.success(message);
 		} else {
+	        Log.i("KIRANCSE","show() - Inside else");
 		    callbackContext.error("Expected one non-empty string argument.");
 		}		
 	}
