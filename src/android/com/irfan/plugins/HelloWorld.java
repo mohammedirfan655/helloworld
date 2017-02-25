@@ -33,6 +33,7 @@ public class HelloWorld extends CordovaPlugin {
 	}
 
 	private void show(String message, CallbackContext callbackContext) {
+		message=message.replaceAll("\"","");
 	        Log.i("KIRANCSE","show() - START");
         Log.i("KIRANCSE","show() - message received = "+message);
         Log.i("KIRANCSE","show() - if result - "+message.equals("Test"));
