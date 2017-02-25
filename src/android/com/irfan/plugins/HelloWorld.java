@@ -16,7 +16,7 @@ public class HelloWorld extends CordovaPlugin {
 		CharSequence text = "This is my first cordova plugin";
 		int duration = Toast.LENGTH_SHORT;
 
-		Toast toast = Toast.makeText(cordova.getActivity().getApplicationContext(), text, duration);
+		Toast toast = Toast.makeText(cordova.getActivity().getApplicationContext(), action, duration);
 		toast.show();
 
 		return true;
