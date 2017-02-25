@@ -13,9 +13,9 @@ public class HelloWorld extends CordovaPlugin {
 	private static final String ACTION_SHOW_EVENT = "show";
 
 	@Override
-	public boolean execute(String action, JSONArray args, final CallbackContext callbackContext) throws JSONException {
+	public boolean execute(String action, String args, final CallbackContext callbackContext) throws JSONException {
 			if ( action.equals(ACTION_SHOW_EVENT) ) {
-				show(args.toString(),callbackContext);
+				show(args,callbackContext);
 				return true;
 			}
 
@@ -30,7 +30,7 @@ public class HelloWorld extends CordovaPlugin {
 	}
 
 	private void show(String message, CallbackContext callbackContext) {
-		if (message != null && message.length() > 0) {
+		if (message == "Test") {
 		    callbackContext.success(message);
 		} else {
 		    callbackContext.error("Expected one non-empty string argument.");

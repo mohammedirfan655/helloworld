@@ -3,8 +3,7 @@ function HelloWorld() {
 
 
 HelloWorld.prototype.show = function (message, successCallback, errorCallback) {
-	var options={"Name":"Irfan"};
-	cordova.exec(successCallback, errorCallback, "HelloWorld", "show", [options]);
+	cordova.exec(successCallback, errorCallback, "HelloWorld", "show", [message]);
 };
 
 HelloWorld.install = function () {
