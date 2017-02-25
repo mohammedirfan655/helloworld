@@ -6,6 +6,7 @@ import android.widget.Toast;
 import org.json.JSONArray;
 import org.json.JSONException;
 import org.json.JSONObject;
+import android.util.Log;
 
 public class HelloWorld extends CordovaPlugin {
 
@@ -16,7 +17,7 @@ public class HelloWorld extends CordovaPlugin {
 		CharSequence text = "This is my first cordova plugin";
 		int duration = Toast.LENGTH_SHORT;
 
-		Toast toast = Toast.makeText(cordova.getActivity().getApplicationContext(), action, duration);
+		Toast toast = Toast.makeText(cordova.getActivity().getApplicationContext(), args.toString(), duration);
 		toast.show();
 
 		return true;
